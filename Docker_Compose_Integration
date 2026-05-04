@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  hex-scanner:
+    image: layerd/hex:latest
+    volumes:
+      - ./models:/scan:ro
+      - ./reports:/output
+    environment:
+      - HEX_VERBOSE=true
+      - HEX_TIMEOUT=600
+    command: ["/scan", "--json", "--output", "/output/report.json"]
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    read_only: true
+    user: "1000:1000"

@@ -1,0 +1,7 @@
+security_scan:
+  image: layerd/hex:latest
+  script:
+    - hex . --json > security-report.json
+  artifacts:
+    reports:
+      security: security-report.json

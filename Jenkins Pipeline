@@ -1,0 +1,12 @@
+stage('Security Scan') {
+  agent {
+    docker {
+      image 'layerd/hex:latest'
+      args '-v $WORKSPACE:/scan:ro'
+    }
+  }
+  steps {
+    sh 'hex /scan --json --output /scan/hex-report.json'
+    archiveArtifacts 'hex-report.json'
+  }
+}

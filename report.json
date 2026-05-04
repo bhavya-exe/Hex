@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "total_issues": 2,
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0,
+    "security_score": 85,
+    "security_grade": "A-",
+    "verdict": "SAFE - Excellent security posture"
+  },
+  "results": [
+    {
+      "id": "HEX-UNK-3440A508-4f62",
+      "type": "INFO",
+      "severity": "INFO",
+      "title": "Model card information extracted",
+      "description": "Found model card for Hex - AI Model Security Scanner by Layerd AI",
+      "file_path": "/scan",
+      "confidence": 1,
+      "metadata": {
+        "first_seen": "2026-03-23T08:54:45.153802797Z",
+        "model_card": {
+          "name": "Hex - AI Model Security Scanner by Layerd AI",
+          "description": "",
+          "model_type": "",
+          "task": ""
+        },
+        "seen_count": 1,
+        "status": "NEW"
+      }
+    },
+    {
+      "id": "HEX-COMP-44218C02-4f62",
+      "type": "COMPLIANCE",
+      "severity": "HIGH",
+      "title": "No license file detected",
+      "description": "Project lacks a license file, defaulting to 'All Rights Reserved'",
+      "file_path": "/scan",
+      "confidence": 1,
+      "remediation": "Add a LICENSE file with appropriate licensing terms",
+      "cwe": [
+        "CWE-489"
+      ],
+      "metadata": {
+        "first_seen": "2026-03-23T08:54:45.153819799Z",
+        "seen_count": 1,
+        "status": "NEW"
+      }
+    }
+  ]
+}
